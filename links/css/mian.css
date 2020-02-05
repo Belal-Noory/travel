@@ -1,0 +1,142 @@
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body::-webkit-scrollbar {
+    width: 2px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+body::-webkit-scrollbar-thumb {
+    width: 2px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+#header {
+    background-image: url('../../images/back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 95vh;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+#overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Black w/opacity */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.6s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 1s;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidenav a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    text-decoration: none;
+    color: #3d68c5;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.navbar-nav li {
+    padding: 0px 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 10%;
+}
+
+.content .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    flex-wrap: nowrap;
+}
+
+.content .icons div {
+    padding: 10px;
+    width: 150px;
+}
+
+.content .icons div span {
+    font-size: 1rem;
+}
+
+.portfilio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    padding: 40px;
+}
+
+#btnallairline:hover {
+    background-color: white;
+    border: 2px solid rgb(44, 84, 196);
+    color: rgb(20, 66, 190);
+}
+
+.footerlist li {
+    margin: 8px;
+}
+
+.footerlist li a {
+    text-decoration: none;
+    color: gray;
+    font-size: 1.1rem;
+}
+
+.footerlist li a:hover {
+    color: white;
+}
